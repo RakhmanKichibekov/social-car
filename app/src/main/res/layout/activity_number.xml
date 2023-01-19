@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".Number">
+    <RelativeLayout
+        android:id="@+id/upper_bg"
+        android:layout_width="match_parent"
+        android:layout_height="110sp"
+        android:background="@color/bg2">
+
+        <TextView
+            android:id="@+id/resultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:textSize="45sp"
+            android:layout_marginTop="25sp"
+            android:layout_marginStart="90sp"
+            android:text="о001оо|05"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_box"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_below="@id/upper_bg"
+        android:background="@color/white"
+        android:layout_marginHorizontal="50sp"
+        android:layout_marginTop="-25sp">
+
+        <EditText
+            android:id="@+id/userNameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginTop="15sp"
+            android:ems="10"
+            android:hint="Введите id авто"
+            android:minHeight="48dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50sp"
+            android:layout_marginTop="60sp"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="goNumber"
+            android:text="Найти номер по id" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg2">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="0sp"
+            android:backgroundTint="@color/purple_700"
+            android:text="Поиск"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="goAdd"
+            android:text="Доб. фото" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="0sp"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="goChats"
+            android:text="Чаты" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="0sp"
+            android:backgroundTint="@color/purple_700"
+            android:onClick="goPhotos"
+            android:text="Мои фото" />
+    </LinearLayout>
+</RelativeLayout>
