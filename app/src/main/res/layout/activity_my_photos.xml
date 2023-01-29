@@ -39,16 +39,16 @@
         android:layout_below="@id/upper_bg"
         android:orientation="vertical">
 
-<!--        <ImageView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/image1"/>-->
-
-        <ListView
-            android:id="@+id/listImages"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
+            android:layout_height="wrap_content"
+            android:id="@+id/image1"/>
+
+<!--        <ListView-->
+<!--            android:id="@+id/listImages"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--        </ListView>-->
 
     </LinearLayout>
 

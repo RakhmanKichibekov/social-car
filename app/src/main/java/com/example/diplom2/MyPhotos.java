@@ -41,27 +41,27 @@ public class MyPhotos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_photos);
-        listView = findViewById(R.id.listImages);
-        //imageView = findViewById(R.id.image1);
+        //listView = findViewById(R.id.listImages);
+        imageView = findViewById(R.id.image1);
 
         //Для заполнения списка
         //listData = new ArrayList<>();
-        adapter = new ArrayAdapter<>(this, R.layout.image_item, R.id.user_name, listData);
-        listView.setAdapter(adapter);
+        //adapter = new ArrayAdapter<>(this, R.layout.image_item, R.id.user_name, listData);
+        //listView.setAdapter(adapter);
         //listView.setAdapter(new SimpleImageListAdapter(MyPhotos.this, listData));
 
 
         //Вход в БД
-        auth = FirebaseAuth.getInstance();
-        db = FirebaseDatabase.getInstance();
-        users = db.getReference("users");
+//        auth = FirebaseAuth.getInstance();
+//        db = FirebaseDatabase.getInstance();
+//        users = db.getReference("users");
 
         //Взятие картинки из БД
-        image = String.valueOf(db.getReference("image"));
-        System.out.println("картинка" + image);
+        //image = String.valueOf(db.getReference("image"));
+        //System.out.println("картинка" + image);
 
         //Попытка вывести картинку из БД
-        String url = "https://firebasestorage.googleapis.com/v0/b/cars-5fe3d.appspot.com/o/images%2F3b78b141-417c-418d-9985-ecab223ddde4?alt=media&token=78cf00b5-fe15-448b-86ac-f473b7256cc6";
+        String url = "https://firebasestorage.googleapis.com/v0/b/cars-5fe3d.appspot.com/o/images%2Fb66d8042-4619-4edd-a9b5-3e41f0cdddda?alt=media&token=74411d90-4f23-4022-98ef-b76f08c41210";
         //Отображение картинки
         Glide.with(getApplicationContext()).load(url).into(imageView);
 
